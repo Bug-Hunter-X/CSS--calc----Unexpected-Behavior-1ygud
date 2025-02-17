@@ -1,0 +1,23 @@
+/* bug.css */
+.container {
+  /* Missing width, causing calc() to behave unexpectedly */
+  background-color: lightgray;
+}
+
+.element {
+  width: calc(100% - 50px);
+  background-color: lightblue;
+  height: 100px;
+}
+
+/* bugSolution.css */
+.container {
+  width: 500px; /* Explicit width added to resolve the issue */
+  background-color: lightgray;
+}
+
+.element {
+  width: calc(100% - 50px);
+  background-color: lightblue;
+  height: 100px;
+}
